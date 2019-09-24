@@ -22,3 +22,11 @@ hr {
   border: 1px solid $black;
 }
 
+.hero-news {
+  padding: 0 10rem;
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10rem;
+  }
+}
