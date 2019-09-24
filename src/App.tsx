@@ -1,23 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header>
+        <h1>BOLSONARO IPSUM</h1>
+        <hr/>
+        <hr/>
+        <div className="paper-info">
+          <p>10/07/1995</p>
+          <p>Brasília - DF</p>
+          <p>Brasil acima de todos</p>
+        </div>
+        <hr/>
+        <hr/>
       </header>
     </div>
   );
