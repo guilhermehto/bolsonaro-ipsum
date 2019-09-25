@@ -21,3 +21,13 @@ body {
   display: flex;
   width: 100%;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
