@@ -1,0 +1,11 @@
+@import '../../theme.scss';
+
+.button {
+    background: transparent;
+    border: 1px solid $black;
+    font-family: 'IM Fell DW Pica SC', serif;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
