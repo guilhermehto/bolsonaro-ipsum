@@ -1,0 +1,7 @@
+@import '../../theme.scss';
+
+.textarea {
+    background: transparent;
+    border: 1px solid $black;
+    resize: none;
+}
