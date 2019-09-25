@@ -57,9 +57,16 @@
     
     .buttons { 
         flex: 1;
+        display: flex;
+        flex-direction: column;
         button {
+            flex: 2;
             width: 100%;
-            height: 4rem;
+            font-size: 2rem;
+        }
+
+        .spacer {
+            flex: 1;
         }
     }
 }

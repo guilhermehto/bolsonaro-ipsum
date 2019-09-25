@@ -3,6 +3,7 @@ import './Home.scss';
 
 import Input from '../input/Input';
 import Textarea from '../textarea/Textarea';
+import Button from '../button/Button';
 
 const Home: React.FC = () => {
   return (
@@ -18,8 +19,9 @@ const Home: React.FC = () => {
         <span className="second-quote">"</span>
       </div>
       <div className="buttons col">
-        <button>GERAR</button>
-        <button>COPIAR</button>
+        <Button>GERAR</Button>
+        <div className="spacer"></div>
+        <Button>COPIAR</Button>
       </div>
     </div>
   );
