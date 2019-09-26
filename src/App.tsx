@@ -14,7 +14,8 @@ const App: React.FC = () => {
         <div className="paper-info">
           <p>{new Date().toLocaleDateString("en-NZ")}</p>
           <p>Brasília - DF</p>
-          <p>Brasil acima de todos</p>
+          
+          <p>Brasil acima de tudo{/* meu pau acima de todos */}</p>
         </div>
         <hr/>
         <hr/>
