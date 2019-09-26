@@ -5,8 +5,9 @@
     font-size: 3rem;
     text-align: justify;
     height: 20rem;
-
+    flex-direction: column;
     .col {
+        display: flex;
         padding: 0 1rem;
     }
 
@@ -68,5 +69,23 @@
         .spacer {
             flex: 1;
         }
+    }
+}
+
+.bolsonaro-picture {
+    margin-top: 2rem;
+    flex: 1;
+    img {
+        width: 40rem;
+        height: auto;
+    }
+}
+
+.bolsonaro-statement {
+    flex: 2;
+    margin-top: 2rem;
+    margin: auto;
+    h1 {
+        font-size: 5rem;
     }
 }
