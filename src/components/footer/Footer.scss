@@ -1,0 +1,15 @@
+.footer {
+    justify-self: end;
+    margin-top: auto;
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+        font-size: 3rem;
+
+        a {
+            font-size: 2rem;
+        }
+    }
+}

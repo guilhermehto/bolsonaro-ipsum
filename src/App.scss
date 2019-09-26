@@ -9,7 +9,9 @@ h1 {
 .app {
   width: 120rem;
   margin: 4rem auto;
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   .paper-info {
     display: flex;
     justify-content: space-between;

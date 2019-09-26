@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import Home from './components/home/Home';
+import Footer from './components/footer/Footer';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <h1><span>TEM</span> <span>QUE</span> <span>MUDAR</span> <span>ISSO</span> <span>AÍ!</span></h1>
       </div>
       <Home />
+      <Footer />
     </div>
   );
 }
