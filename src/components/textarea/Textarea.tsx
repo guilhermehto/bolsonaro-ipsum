@@ -1,9 +1,9 @@
 import React from 'react';
 import './Textarea.scss';
 
-const Textarea = () => {
+const Textarea = (props: any) => {
     return (
-      <textarea className="textarea">
+      <textarea className="textarea" value={props.value} readOnly={props.readOnly}>
       </textarea>
     );
   }

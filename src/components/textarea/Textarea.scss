@@ -4,4 +4,19 @@
     background: transparent;
     border: 1px solid $black;
     resize: none;
+    padding: 1rem;
+    text-align: justify;
+    
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+  
+::-webkit-scrollbar-track {
+    background: $old-yellow; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: $black; 
 }
