@@ -1,13 +1,9 @@
 import React from 'react';
 import './Input.scss';
 
-type Props = {
-    type: string
-}
-
-const Input = (props: Props) => {
+const Input = (props: any) => {
     return (
-      <input type={props.type} className="input">
+      <input {...props} className="input">
       </input>
     );
   }

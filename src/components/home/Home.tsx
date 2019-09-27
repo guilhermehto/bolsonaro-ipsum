@@ -28,13 +28,20 @@ export class Home extends Component<{}, IHomeState> {
     this.setState({ phrases: await this.phrasesService.getPhrases(this.state.paragraphsCount) })
   }
 
+  handleParagraphsCountChange = (event: any) => {
+    let targetValue = event.target.value;
+    targetValue = targetValue < 0 ? 1 : targetValue;
+    targetValue = targetValue >= 10 ? 10 : targetValue;
+    this.setState({paragraphsCount: targetValue})
+  }
+
   render() {
     return (
       <div className="home">
         <div className="col">
           <div className="form col">
             <p>Nosso presidente acabou de fazer uma declaração com</p>
-            <Input type="number" value={this.state.paragraphsCount}/>
+            <Input type="number" value={this.state.paragraphsCount} onChange={this.handleParagraphsCountChange}/>
             <p>parágrafos.</p>
           </div>
           <div className="result col">

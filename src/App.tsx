@@ -4,6 +4,7 @@ import './App.scss';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 
+
 const App: React.FC = () => {
   return (
     <div className="app">
