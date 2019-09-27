@@ -10,10 +10,13 @@ import Button from '../button/Button';
 
 interface IHomeState {
   paragraphsCount: number,
-  phrases: String,
+  phrases: string,
 }
 
 export class Home extends Component<{}, IHomeState> {
+  phrasesService = new PhrasesService();
+  textarea: any;
+  
   constructor(props: any) {
     super(props);
     this.state = {
@@ -22,7 +25,6 @@ export class Home extends Component<{}, IHomeState> {
     }
   }
 
-  phrasesService = new PhrasesService();
 
   async generateNewParagraphs() {
     this.setState({ phrases: await this.phrasesService.getPhrases(this.state.paragraphsCount) })
@@ -43,6 +45,10 @@ export class Home extends Component<{}, IHomeState> {
     await this.generateNewParagraphs();
   }
 
+  handleCopy = () => {
+    navigator.clipboard.writeText(this.state.phrases);
+  }
+
   render() {
     return (
       <div className="home">
@@ -60,7 +66,7 @@ export class Home extends Component<{}, IHomeState> {
           <div className="buttons col">
             <Button onClick={this.handleGenerate}>GERAR</Button>
             <div className="spacer"></div>
-            <Button>COPIAR</Button>
+            <Button onClick={this.handleCopy}>COPIAR</Button>
           </div>
         </div>
         <div className="col">
