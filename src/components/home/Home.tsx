@@ -24,15 +24,23 @@ export class Home extends Component<{}, IHomeState> {
 
   phrasesService = new PhrasesService();
 
-  async componentWillMount() {
+  async generateNewParagraphs() {
     this.setState({ phrases: await this.phrasesService.getPhrases(this.state.paragraphsCount) })
+  }
+
+  async componentWillMount() {
+    await this.generateNewParagraphs();
   }
 
   handleParagraphsCountChange = (event: any) => {
     let targetValue = event.target.value;
     targetValue = targetValue < 0 ? 1 : targetValue;
     targetValue = targetValue >= 10 ? 10 : targetValue;
-    this.setState({paragraphsCount: targetValue})
+    this.setState({ paragraphsCount: targetValue })
+  }
+
+  handleGenerate = async () => {
+    await this.generateNewParagraphs();
   }
 
   render() {
@@ -41,7 +49,7 @@ export class Home extends Component<{}, IHomeState> {
         <div className="col">
           <div className="form col">
             <p>Nosso presidente acabou de fazer uma declaração com</p>
-            <Input type="number" value={this.state.paragraphsCount} onChange={this.handleParagraphsCountChange}/>
+            <Input type="number" value={this.state.paragraphsCount} onChange={this.handleParagraphsCountChange} />
             <p>parágrafos.</p>
           </div>
           <div className="result col">
@@ -50,7 +58,7 @@ export class Home extends Component<{}, IHomeState> {
             <span className="second-quote">"</span>
           </div>
           <div className="buttons col">
-            <Button>GERAR</Button>
+            <Button onClick={this.handleGenerate}>GERAR</Button>
             <div className="spacer"></div>
             <Button>COPIAR</Button>
           </div>
