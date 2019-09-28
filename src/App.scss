@@ -1,6 +1,6 @@
 @import './theme.scss';
 
-h1 {
+h1, h2 {
   text-align: center;
   font-family: 'Ultra', serif;
   font-size: 3rem;
@@ -26,11 +26,22 @@ hr {
 }
 
 .hero-news {
-  padding: 0 10rem;
+
+  @media screen and (max-width: 1201px) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: 1201px) {
+    padding: 0 10rem;
+  }
+
   margin-bottom: 2rem;
   h1 {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10rem;
+    flex-wrap: wrap;
+    font-size: 6rem;
+    text-align: center;
+    @media screen and (max-width: 600px) {
+      font-size: 4rem;
+    }
   }
 }

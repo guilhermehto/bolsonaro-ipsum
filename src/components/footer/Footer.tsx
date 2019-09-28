@@ -7,8 +7,8 @@ const Footer = () => {
             <hr />
             <hr />
             <div className="footer-info">
-                <p>Desenvolvido por <a href="https://twitter.com/datOliveira">Guilherme Oliveira</a></p>
-                <p>Disponível no <a href="https://github.com/guilhermehto/bolsonaro-ipsum">GitHub</a></p>
+                <p className="developer">Desenvolvido por <a href="https://twitter.com/datOliveira">Guilherme Oliveira</a></p>
+                <p className="github">Disponível no <a href="https://github.com/guilhermehto/bolsonaro-ipsum">GitHub</a></p>
             </div>
             <hr />
             <hr />

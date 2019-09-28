@@ -10,19 +10,28 @@ const App: React.FC = () => {
     <div className="app">
       <header>
         <h1>BOLSONARO IPSUM</h1>
-        <hr/>
-        <hr/>
+        <hr />
+        <hr />
         <div className="paper-info">
           <p>{new Date().toLocaleDateString("en-NZ")}</p>
           <p>Brasília - DF</p>
-          
           <p>Brasil acima de tudo{/* meu pau acima de todos */}</p>
         </div>
-        <hr/>
-        <hr/>
+        <hr />
+        <hr />
       </header>
-      <div className="hero-news">
-        <h1><span>TEM</span> <span>QUE</span> <span>MUDAR</span> <span>ISSO</span> <span>AÍ!</span></h1>
+      <div className="desktop-only">
+        <div className="hero-news">
+          {/* <h1><span>TEM</span> <span>QUE</span> <span>MUDAR</span> <span>ISSO</span> <span>AÍ!</span></h1> */}
+          <h1>TEM QUE MUDAR ISSO AÍ!</h1>
+        </div>
+      </div>
+      <div className="mobile-only">
+        <div className="hero-news">
+          <h2>
+            TEM QUE MUDAR ISSO AÍ!
+        </h2>
+        </div>
       </div>
       <Home />
       <Footer />
