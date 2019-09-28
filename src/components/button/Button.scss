@@ -4,8 +4,15 @@
     background: transparent;
     border: 1px solid $black;
     font-family: 'IM Fell DW Pica SC', serif;
-
+    transition: all 0.2s;
+    
     &:hover {
         cursor: pointer;
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        cursor: pointer;
+        transform: translateY(3px);
     }
 }
