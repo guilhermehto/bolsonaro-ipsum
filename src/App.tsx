@@ -4,6 +4,10 @@ import './App.scss';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 
+import firebase from './services/FirebaseService';
+import 'firebase/analytics';
+
+firebase.analytics();
 
 const App: React.FC = () => {
   return (

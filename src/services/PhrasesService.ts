@@ -1,11 +1,4 @@
-import firebaseConfig from '../FirebaseConfig';
-
-import firebase from 'firebase';
-import 'firebase/firestore';
-
-firebase.initializeApp(
-  firebaseConfig
-);
+import firebase from './FirebaseService';
 
 const db = firebase.firestore();
 
